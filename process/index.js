@@ -7,7 +7,7 @@ function markdownParse(settings) {
   function wrapper(title, content, path) {
     content += util.format(
       '<blockquote class="warning">' +
-      '<p>文档内容有误，可提 PR，文档地址: <i class="fa fa-github"></i><a href="https://github.com/Rosetta-org/rosetta-doc/tree/master%s">%s</a></p>' +
+      '<p>发现了问题或想要贡献？来 Github 和Rosetta联系或者Fork吧！: <i class="fa fa-github"></i><a href="https://github.com/Rosetta-org/rosetta-doc/tree/master%s">%s</a></p>' +
       '</blockquote>', path, path);
     return layout.getContent()
       .replace('{{content}}', content)
