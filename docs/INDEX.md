@@ -10,14 +10,14 @@
 
 - [特征和开发指南](./guide/guide.md)
   - [注册和生命周期](./guide/life.md)
-  - [element的属性](./guide/property.md)
-  - [模版](./guide/dom.md)
+  - [property数据接口](./guide/property.md)
+  - [DOM结构](./guide/dom.md)
   - [样式](./guide/style.md)
   - [事件](./guide/events.md)
   - [数据更新](./guide/data.md)
-  - [功能函数接口](./guide/function.md)
+  - [功能函数](./guide/function.md)
 
-- [入门使用](./lv1.md)
+- [入门示例](./lv1.md)
   - [定义element](./lv1.md#定义element)
   - [增加html、变量、属性](./lv1.md#增加html、变量、属性)
   - [设置样式](./lv1.md#设置样式)
@@ -34,7 +34,7 @@
   - [基于FIS3的预处理](./lv1.md#基于Fis3的Element预处理)
 
 
-- [高级使用](./lv2.md)
+- [高级示例](./lv2.md)
   - [动态实例化element](./lv2.md#动态实例化)
   - [异步加载注册element](./lv2.md#异步加载注册element)
 
