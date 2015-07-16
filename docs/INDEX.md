@@ -28,6 +28,7 @@
   - [更新element的属性](./lv1.md#更新element的属性)
   - [refs快速访问内部DOM](./lv1.md#refs快速访问内部DOM)
   - [定义容器](./lv1.md#定义容器)
+  - [嵌套使用element](./lv1.md#嵌套使用element) 
   - [ready接口](./lv1.md#ready接口)
   - [ref接口快速element实例](./lv1.md#ref接口快速element实例)
   - [init接口](./lv1.md#init接口)
@@ -45,14 +46,13 @@
 
 
 - [API接口文档](./api/api.md)
-  - [Element的动态数据](./api/api.md#Element的动态数据)
-  - [模版语法](./api/api.md#模版语法)
-  - [定义实例逻辑](./api/api.md#定义实例逻辑)
-  - [Element生命周期](./api/api.md#Element生命周期)
-  - [定位DOM](./api/api.md#定位DOM)
-  - [事件绑定](./api/api.md#事件绑定)
-  - [动态实例化Element](./api/api.md#实例化Element)
-  - [动态渲染Element](./api/api.md#渲染Element)
+  - [element类注册](./api/api.md#element类注册)
+  - [创建element实例](./api/api.md#创建element实例)
+  - [查找element实例](./api/api.md#查找element实例)
+  - [页面element完成渲染](./api/api.md#页面element完成渲染)
+  - [触发页面级别的渲染](./api/api.md#触发页面级别的渲染)
+  - [异步加载](./api/api.md#异步加载)
+
 
 - 工作原理
   - [Runtime](./beginning/runtime.md)

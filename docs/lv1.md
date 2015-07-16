@@ -395,6 +395,35 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
 </html>
 ```
 
+### 嵌套使用element
+在定义elementA的时候使用已经定义好的elementB，是这里说的"嵌套使用element"
+按照以下步骤嵌套使用element
+
+- 通过HTML Import引入依赖的elementB定义文件
+- 使用elementB的标签
+
+示例如下：
+```html
+<element name="r-a">
+    <style>
+        :host div {
+            color: red;
+        }
+    </style>
+    <link rel="import" type="text/html" href="r-b.html">
+    <template>
+        <content select='.aaa'>
+        </content>
+        <r-b></r-b>
+    </template>
+    <script type="text/javascript">
+        Rosetta.register('r-a', function(tag) {
+            //xxxxx
+        });
+    </script>
+</element>
+
+```
 
 ### ready接口
 - 在当前页面所有的custom element实例化完毕的时候会执行Rosetta ready状态的callback
