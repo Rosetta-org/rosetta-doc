@@ -16,7 +16,9 @@
 
 - ref
 - on
+- once
 - off
+- update
 - destroy
 
 > 模版
