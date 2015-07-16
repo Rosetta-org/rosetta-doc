@@ -192,6 +192,12 @@ element定义的时候可以绑定生命周期的事件
 - onDettached
 - onAttributesChanged
 
+组件初始化的生命周期顺序
+- created
+- internal DOM initialized
+- domReady
+- attached
+
 提供定义生命周期callback的两种形式
 - 可以通过设置DOM的attribute的形式声明对于生命周期的绑定，类似于事件绑定，区别在于以attributes声明的时候生命周期只可以生命在```<element></element>```的属性上
 - 在register的函数中定义

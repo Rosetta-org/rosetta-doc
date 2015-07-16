@@ -1,12 +1,21 @@
 - [介绍](./beginning/intro.md)
   - [安装依赖](./beginning/install.md)
   - [获取Rosetta](./beginning/getRosetta.md)
+
 - 快速开始
   - [手把手教你写一个helloworld](./beginning/helloworld.md)
   - [一分钟功能概览](./beginning/core.md)
   - [组件生态](./beginning/elements.md)
   - [脚手架](./beginning/scaffold.md)
 
+- [特征和开发指南](./guide/guide.md)
+  - [注册和生命周期](./guide/life.md)
+  - [element的属性](./guide/property.md)
+  - [模版](./guide/dom.md)
+  - [样式](./guide/style.md)
+  - [事件](./guide/events.md)
+  - [数据更新](./guide/data.md)
+  - [功能函数接口](./guide/function.md)
 
 - [入门使用](./lv1.md)
   - [定义element](./lv1.md#定义element)
