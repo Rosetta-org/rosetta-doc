@@ -47,10 +47,10 @@
             <div class="section">
                 <div class="item float">
                     <div class="title">
-                        <i class="fa fa-bolt"></i> 加速开发
+                        <i class="fa fa-rocket"></i> 加速开发
                     </div>
                     <p>
-                        像原生标签一样使用组件；初始化和复杂逻辑封装到组件定义中；每个组件都有完整的生命周期；动态更新数据和UI渲染；丰富的命令行
+                        良好的开发体验，更容易理解的组件化机制；自动化工具支持
                     </p>
                 </div>
                 <div class="item float">
@@ -58,7 +58,7 @@
                         <i class="fa fa-flag"></i> 拥抱标准
                     </div>
                     <p>
-                        设计理念拥抱Web Components，解决标准落地的兼容性问题；Custom Elements作为组件开发、使用规则；部分提供Shadow Dom功能；完全支持Templating
+                        面向未来，拥抱 web components 标准，减少混乱与兼容性问题
                     </p>
                 </div>
                 <div class="item float">
@@ -67,157 +67,17 @@
                         <i class="fa fa-mobile"></i> 兼容性广
                     </div>
                     <p>
-                        PC: Chrome; Firefox; IE8~11; Safari
-                    </p>
-                    <p>
-                        Mobile: Android>=2.3; IOS>=5; UC、QQ、百度等三方手机浏览器
+                        不依赖原生接口，支持 PC、Andriod、IOS 各平台浏览器
                     </p>
                 </div>
                 <div class="item float">
                     <div class="title">
-                        <i class="fa fa-circle-o-notch"></i> 开发生态
+                        <i class="fa fa-users"></i> 开发生态
                     </div>
                     <p>
-                        基础提供基于BoostUI封装的Elements；三方组件接入生态，同标准下共享开发资源
+                        更丰富的组件可以使用，核心组件、UI 组件、业务组件；更便捷的组件贡献机制
                     </p>
                 </div>
-            </div>
-        </div>
-        <div class="info-section features clearfix">
-            <h1 class="title">
-                核心功能
-            </h1>
-            <div class="section">
-                <div class="item float">
-                    <div class="title">
-                        <i class="fa fa-compass"></i> 注册机制
-                    </div>
-                    <p>
-                        提供新Element类的注册接口 注册后就拥有Element的基础接口和生命周期
-                    </p>
-                </div>
-                <div class="item float">
-                    <div class="title">
-                        <i class="fa fa-retweet"></i> 完整生命周期
-                    </div>
-                    <p>
-                        和WebComponents行为和名称一致的生命周期，created、attached、attributeChanged、dettached
-                    </p>
-                </div>
-                <div class="item float">
-                    <div class="title">
-                        <i class="fa fa-code"></i> 声明式使用
-                    </div>
-                    <p>
-                        原生tag一样使用新Element；声明式的设置属性
-                        <br/>
-                        <code>
-                &lt;r-slider aaa="test" &gt; &lt;/r-slider&gt;
-            </code>
-                    </p>
-                </div>
-                <div class="item float">
-                    <div class="title">
-                        <i class="fa fa-suitcase"></i> Element内外隔离
-                    </div>
-                    <p>
-                        统一接口形式和生命周期事件，隔离内外功能耦合
-                    </p>
-                    <p>
-                        content标签隔离内外嵌套
-                    </p>
-                    <p>
-                        部分的css shadow，隔离内部对外部的css污染
-                    </p>
-                </div>
-                <div class="item float">
-                    <div class="title">
-                        <i class="fa fa-hand-o-right"></i> 灵活的模版语法
-                    </div>
-                    <p>
-                        {}隔离模版语法和外部的html，模版语法采用原生的js灵活低成本，js内以jsx语法嵌套html
-                    </p>
-                </div>
-                <div class="item float">
-                    <div class="title">
-                        <i class="fa fa-flash"></i> 事件、数据和DOM
-                    </div>
-                    <p>
-                        Element定义内部共享作用域，方便快速的事件绑定和变量使用；提供ref迅速获取DOM和Element实例，省去复杂代码
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="info-section steps clearfix">
-            <h1 class="title">
-                四步Run项目
-            </h1>
-            <div class="section">
-                <div class="item flex">
-                    <div class="title">
-                        <i class="fa fa-arrow-circle-o-right"> 配置环境</i>
-                    </div>
-                    <code class="cmd">
-                        $ npm install fis3 -g
-
-                        <br/>
-                    </code>
-                </div>
-                <div class="item flex">
-                    <code class="cmd">
-                        $ mkdir demo
-                        <br/>
-                        $ cd demo
-                        <br/>
-                        $ fis3 init rosetta
-                    </code>
-                    <div class="title">
-                        <i class="fa fa-arrow-circle-o-left"> 安装脚手架</i>
-                    </div>
-                </div>
-                <div class="item flex">
-                    <div class="title">
-                        <i class="fa fa-arrow-circle-o-right"> 运行Server</i>
-                    </div>
-                    <code class="cmd">
-                        $ fis3 release
-                        <br/>
-                        $ fis3 server install server-env
-                        <br/>
-                        $ fis3 server start --rewrite --type php
-                    </code>
-                </div>
-                <div class="item flex">
-                    <code class="cmd">
-                        $ fis3 init element
-                    </code>
-                    <div class="title">
-                        <i class="fa fa-arrow-circle-o-left"> 生成新Element</i>
-                    </div>
-                </div>
-            </div>
-            <a class="more-btn" href="https://github.com/fis-scaffold/rosetta">
-            更多命令
-        </a>
-        </div>
-        <div class="info-section compability clearfix">
-            <h1 class="title">
-                兼容性
-            </h1>
-            <div class="content">
-                <img src="https://camo.githubusercontent.com/195ccdc0cdd79b5885b51bc28a394caee034c06a/68747470733a2f2f73617563656c6162732e636f6d2f62726f777365722d6d61747269782f676c6f7269612e737667" alt="Sauce Test Status" data-canonical-src="https://saucelabs.com/browser-matrix/gloria.svg">
-            </div>
-        </div>
-        <div class="info-section performance clearfix">
-            <h1 class="title">
-                性能
-            </h1>
-            <div class="content">
-                <img src="https://raw.githubusercontent.com/jiexuangao/todomvc-perf-comparison/master/sampleResult.png" alt="Sample results for Chrome Version 41.0.2272.101 (64-bit) OSX 10.10.3 on a Macbook Air">
-                <p>
-                    本测试跑在 Chrome Version 41.0.2272.101 (64-bit) OSX 10.10.3上，可以点击
-                    <a href="http://jiexuangao.github.io/todomvc-perf-comparison/">这里</a>进行你浏览器上的性能测试
-                </p>
             </div>
         </div>
     </div>
