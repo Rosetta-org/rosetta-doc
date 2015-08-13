@@ -30,7 +30,7 @@
 > 模版
 
 - {} + js + jsx
-- on-eventName || onEventName
+- onEventName
 
 
 
@@ -49,34 +49,13 @@
 
 
 ### 触发页面级别的渲染
-- Rosetta.init => render
+- Rosetta.render
 
 
 ### 异步加载
 - Rosetta.import
 
 
-说明：
-- 编译生成Rosetta.config，类似于
-{
-    'r-a.html': {
-        elementName: 'r-a'
-        url: 'r-a_xxx.js'
-        deps: [r-b.html, r-c.html]
-    },
-    xxx
-}
-
-麻烦学芝补充详细结构
-
-- 打包策略
-    - 异步r-a依赖同步r-b，则r-a打包入r-b
-    - 通过查config表获取类型，查是否注册过，注册过则不再异步加载
-    - 异步r-a如果还依赖r-c，则走上一条策略判断是否需要异步加载
-
-- 异步返回后，自动进行页面级的Rosetta.render
-
-- SPA情况下，用户在更新页面dom后，主动调用Rosetta.render，来进行组件渲染
 
 
 
