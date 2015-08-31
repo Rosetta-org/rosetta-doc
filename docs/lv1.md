@@ -168,11 +168,11 @@ Rosetta为element内部DOM提供事件绑定方式，以'on'加首字母大写�
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            var title = '我是一个测试title';
-            var clicked = function() {
+        Rosetta({
+            is: 'r-slider',
+            clicked: function () {
                 alert('clicked');
-            };
+            }
         });
     </script>
 </element>
@@ -236,6 +236,18 @@ element定义的时候可以绑定生命周期的事件
                 alert('created');
             });
         });
+        Rosetta({
+            is: 'r-slider',
+            attached: function () {
+                alert('attached');
+            },
+            created: function() {
+                alert('created');
+            },
+            clicked: function() {
+                alert('clicked');
+            }
+        });
     </script>
 </element>
 ```
@@ -286,15 +298,16 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            var title = '我是一个测试title';
-
-            var clicked = function() {
-                tag.update({
+        Rosetta({
+            is: 'r-slider',
+            properties: {
+                text: 'init'
+            },
+            clicked: function() {
+                this.update({
                     text: 'clicked!'
-                });
-            };
-
+                })
+            }
         });
     </script>
 </element>
@@ -335,12 +348,13 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            tag.on('attached', function() {
-                var test = tag.refs['test'];
+        Rosetta({
+            is: 'r-slider',
+            attached: function() {
+                var test = this.$['test'];
                 test.innerHTML += '更新啦';
-            });
-        });
+            }
+        })
     </script>
 </element>
 ```
@@ -365,9 +379,9 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
         </content>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            //xxxxx
-        });
+        Rosetta({
+            is: 'r-slider'
+        })
     </script>
 </element>
 
@@ -417,8 +431,8 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
         <r-b></r-b>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-a', function(tag) {
-            //xxxxx
+        Rosetta({
+            is: 'r-a'
         });
     </script>
 </element>

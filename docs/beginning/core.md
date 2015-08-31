@@ -39,18 +39,28 @@ Rosetta让开发者能够更便捷的以声明式来写组件
     <template>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            tag.attrs = {
-                list: [{
-                    title: '111'
-                    src: 'xxx'
-                }, {
-                    title: '222'
-                    src: 'zzz'
-                }],
-                text: '测试'
+        Rosetta({
+            is: 'r-slider',
+            properties: {
+                list: {
+                    type: Array,
+                    value:[
+                        {
+                            title: '111'
+                            src: 'xxx'
+                        },
+                        {
+                            title: '222'
+                            src: 'zzz'
+                        }
+                    ]
+                },
+                text: {
+                    type: String,
+                    value: '测试'
+                }
             }
-        });
+        })
     </script>
 </element>
 ```
@@ -82,18 +92,28 @@ Rosetta让开发者能够更便捷的以声明式来写组件
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            tag.attrs = {
-                list: [{
-                    title: '111'
-                    src: 'xxx'
-                }, {
-                    title: '222'
-                    src: 'zzz'
-                }],
-                text: '测试'
+        Rosetta({
+            is: 'r-slider',
+            properties: {
+                list: {
+                    type: Array,
+                    value:[
+                        {
+                            title: '111'
+                            src: 'xxx'
+                        },
+                        {
+                            title: '222'
+                            src: 'zzz'
+                        }
+                    ]
+                },
+                text: {
+                    type: String,
+                    value: '测试'
+                }
             }
-        });
+        })
     </script>
 </element>
 ```
@@ -114,16 +134,26 @@ Rosetta让开发者能够更便捷的以声明式来写组件
         </content>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            tag.attrs = {
-                list: [{
-                    title: '111'
-                    src: 'xxx'
-                }, {
-                    title: '222'
-                    src: 'zzz'
-                }],
-                text: '测试'
+        Rosetta({
+            is: 'r-slider',
+            properties: {
+                list: {
+                    type: Array,
+                    value:[
+                        {
+                            title: '111'
+                            src: 'xxx'
+                        },
+                        {
+                            title: '222'
+                            src: 'zzz'
+                        }
+                    ]
+                },
+                text: {
+                    type: String,
+                    value: '测试'
+                }
             }
         });
     </script>
@@ -166,16 +196,26 @@ Rosetta为custom elements实现了和标准一致的生命周期：
     <template>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            tag.attrs = {
-                list: [{
-                    title: '111'
-                    src: 'xxx'
-                }, {
-                    title: '222'
-                    src: 'zzz'
-                }],
-                text: '测试'
+        Rosetta({
+            is: 'r-slider',
+            properties: {
+                list: {
+                    type: Array,
+                    value:[
+                        {
+                            title: '111'
+                            src: 'xxx'
+                        },
+                        {
+                            title: '222'
+                            src: 'zzz'
+                        }
+                    ]
+                },
+                text: {
+                    type: String,
+                    value: '测试'
+                }
             }
         });
     </script>
@@ -209,11 +249,12 @@ Rosetta为custom elements实现了和标准一致的生命周期：
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-button', function(tag) {
-            var clicktest = function() {
+        Rosetta({
+            is: 'r-button',
+            clicktest: function() {
                 alert('clicked');
-            };
-        });
+            }
+        })
     </script>
 </element>
 ```
@@ -221,27 +262,28 @@ Rosetta为custom elements实现了和标准一致的生命周期：
 - 组件支持声明式的事件绑定
 
 ```
-<element name="r-button" onAttached={update}>
+<element name="r-button" onAttached={attachcb}>
     <style>
     </style>
     <template>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-button', function(tag) {
-            var update = function() {
-                alert('attached');
-            };
-        });
+        Rosetta({
+            is: 'r-button',
+            attachcb: function() {
+                alert('clicked');
+            }
+        })
     </script>
 </element>
 ```
 
 
 ### 数据更新
-通过element实例的update接口，进行数据更新，比如在组件渲染完毕的时候进行数据更新
+通过element实例的attachcb接口，进行数据更新，比如在组件渲染完毕的时候进行数据更新
 
 ```
-<element name="r-button" onAttached={update}>
+<element name="r-button" onAttached={attachcb}>
     <style>
     </style>
     <template>
@@ -250,14 +292,14 @@ Rosetta为custom elements实现了和标准一致的生命周期：
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-button', function(tag) {
-            tag.attrs = {
+        Rosetta({
+            is: 'r-button',
+            properties: {
                 text: '测试'
-            };
-
-            var update = function() {
-                tag.attrs.text = 'after render';
-            };
+            }
+            attachcb: function() {
+                this.text = 'after render';
+            }
         });
     </script>
 </element>

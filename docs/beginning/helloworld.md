@@ -46,7 +46,8 @@ r-helloworld.html内容如下
         {attrs.hellotext}
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-helloworld', function() {
+        Rosetta({
+            is: 'r-helloworld'
         });
     </script>
 </element>
