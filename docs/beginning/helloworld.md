@@ -15,7 +15,7 @@ cd helloworld
         "author": "fis-components"
     },
     "dependencies": [
-        "github:fis-components/rosetta@^1.0.1"
+        "github:fis-components/rosetta@^1.0.2"
     ]
 }
 
