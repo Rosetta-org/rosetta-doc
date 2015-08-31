@@ -75,13 +75,18 @@
         <div>
             我是DOM结构示例
         </div>
-        <span>{attrs.text}</span>
+        <span>{text}</span>
         <span>{title}</span>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            var title = '我是一个作用域内的变量'
-        })
+        Rosetta({
+            is: 'r-slider',
+            properties: {
+                text: 'text'
+            },
+            title: '我是一个作用域内的变量'
+        });
+
     </script>
 </element>
 
@@ -138,8 +143,9 @@
         </span>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            var title = '我是一个测试title';
+        Rosetta({
+            is: 'r-slider',
+            title: '我是一个测试title'
         });
     </script>
 </element>
@@ -222,20 +228,6 @@ element定义的时候可以绑定生命周期的事件
         </div>
     </template>
     <script type="text/javascript">
-        Rosetta.register('r-slider', function(tag) {
-            var title = '我是一个测试title';
-            var clicked = function() {
-                alert('clicked');
-            };
-
-            var onAttached = function() {
-                alert('attached');
-            };
-
-            tag.on('created', function() {
-                alert('created');
-            });
-        });
         Rosetta({
             is: 'r-slider',
             attached: function () {
