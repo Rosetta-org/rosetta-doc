@@ -58,4 +58,12 @@ npm update -g fis3
 npm install -g fis3
 ```
 
+### 安装Rosetta编译的FIS插件
+```bash
+npm install -g fis3-parser-rosetta fis3-postpackager-rosetta fis3-preprocessor-rosetta-import
+```
+- fis3-parser-rosetta : 解析element定义
+- fis3-postpackager-rosetta : Rosetta按页面依赖关系打包静态资源的基于FIS的插件
+- fis3-preprocessor-rosetta-import : 异步加载element的编译依赖插件
+
 ### [深入了解FIS3](https://github.com/fex-team/fis3)
