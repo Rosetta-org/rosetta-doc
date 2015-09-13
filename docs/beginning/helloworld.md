@@ -89,6 +89,7 @@ r-helloworld.html内容如下
 ```js
 
 fis
+    // 用rosetta的parser插件进行element定义文件解析、使用处的import语法解析
     .match('*.{html,tpl}', {
         parser: fis.plugin('rosetta', {
             compileUsage: false

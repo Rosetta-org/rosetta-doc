@@ -160,6 +160,14 @@ Rosetta让开发者能够更便捷的以声明式来写组件
 </element>
 ```
 使用：
+假如目录结构如下
+```
+-
+- index.html
+- elements
+    - r-slider.html
+```
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -167,6 +175,7 @@ Rosetta让开发者能够更便捷的以声明式来写组件
     <title></title>
 </head>
 <body>
+    <link rel="import" type="text/html" href="elements/r-slider.html">
     <r-slider text="啦啦啦" list="[]">
         <div class="aaa">
             我会被选中
@@ -184,7 +193,7 @@ Rosetta为custom elements实现了和标准一致的生命周期：
 - created：组件创建
 - attached：组件渲染到document里
 - dettached：组件从document移除
-- attributeschanged：属性更新
+- attributechanged：属性更新
 
 
 ### 属性声明

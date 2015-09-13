@@ -10,11 +10,17 @@ Rosetta提供一系列的核心功能和特征，为开发者建立自定义elem
 
     </style>
     <template>
-        {attrs.hellotext}
+        {hellotext}
     </template>
     <script type="text/javascript">
         Rosetta({
-            is: 'r-helloworld'
+            is: 'r-helloworld',
+            properties: {
+                hellotext: {
+                    type: String,
+                    value: 'ssds'
+                }
+            }
         });
     </script>
 </element>

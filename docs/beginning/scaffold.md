@@ -20,11 +20,10 @@
     fis3 release -w
 ```
 
-- 自动生成新的Element脚手架
+- 自动生成新的element脚手架
 ```js
     fis3 init element
 ```
-
 
 - 指定目录获得产出产品代码
 ```js

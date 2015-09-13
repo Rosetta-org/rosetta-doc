@@ -11,9 +11,9 @@
 ### 从ZIP获取Rosetta
 下载[ZIP文件](https://github.com/jiexuangao/rosetta/archive/master.zip)
 
-### 贡献element
-```js
-fis3 install rosetta@1.0.1
+### 通过FIS组件生态获取Rosetta
+```bash
+fis3 install rosetta@^1.0.2
 ```
 
 ### 脚手架
