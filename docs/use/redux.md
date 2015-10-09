@@ -1,0 +1,1 @@
+## 这里是Rosetta和redux一起使用的方案

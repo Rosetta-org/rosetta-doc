@@ -20,3 +20,10 @@ Rosetta为开发者提供声明式element使用方式，同时对标createElemen
     - ifReplaceTarget为true表示替换targetDOM，为false表示作为targetDOM的子元素
 
 ### 异步加载注册element
+Rosetta支持异步加载组件文件（注册），使用方式如下
+```
+    Rosetta.import(['/element/r-aa.html'], function() {
+        // you can do something here
+    })
+```
+使用import，编译的时候rosetta-preprocessor-import插件会解析生成Rosetta异步加载的resourceMap，runtime执行import的时候Rosetta会自动进行依赖加载。

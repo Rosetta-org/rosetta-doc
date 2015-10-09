@@ -434,6 +434,7 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
 ### ready接口
 - 在当前页面所有的custom element实例化完毕的时候会执行Rosetta ready状态的callback
 - Rosetta.ready接口接受function为参数作为callback
+- Rosetta.render()会主动触发element渲染，从而触发Rosetta.ready的callback的执行
 
 ```
 <!DOCTYPE html>

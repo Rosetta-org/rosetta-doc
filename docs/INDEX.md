@@ -62,4 +62,7 @@
   - [Compile](./beginning/compile.md)
 
 
-- [Rosetta1.0整合三方](./usage.md)
+- [Rosetta1.0整合三方](./use/usage.md)
+  - [use-redux](./use/redux.md)
+  - [use-smarty](./use/smarty.md)
+  - [use-laravel](./use/laravel.md)

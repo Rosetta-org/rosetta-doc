@@ -46,6 +46,8 @@
 
 ### 页面element完成渲染
 - Rosetta.ready
+- 主动调用Rosetta.render，会触发Rosetta.ready中回调函数的执行
+- Rosetta.ready第一个参数为function，第二个参数为是否只绑定一次ready（不设置的时候默认为false，即每次ready的时候，已经绑定的function都会执行一遍）
 
 
 ### 触发页面级别的渲染
