@@ -48,14 +48,14 @@
   - [基于FIS3的项目构建](./lv3.md#基于Fis3的构建)
 
 
-- [API接口文档](./api/api.md)
+- [API简单接口文档](./api/api.md)
   - [element类注册](./api/api.md#element类注册)
   - [创建element实例](./api/api.md#创建element实例)
   - [查找element实例](./api/api.md#查找element实例)
   - [页面element完成渲染](./api/api.md#页面element完成渲染)
   - [触发页面级别的渲染](./api/api.md#触发页面级别的渲染)
   - [异步加载](./api/api.md#异步加载)
-
+- [API详细文档](/docs/apidoc/index.html)
 
 - 工作原理
   - [Runtime](./beginning/runtime.md)
