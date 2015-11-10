@@ -11,6 +11,7 @@ Rosetta让开发者能够更便捷的以声明式来写组件
 - [事件绑定](./core.md#事件绑定)
 - [属性声明](./core.md#属性声明)
 - [数据更新](./core.md#数据更新)
+- [组件嵌套](./core.md#组件嵌套)
 
 
 这里你可以看到每个核心功能的例子
@@ -313,3 +314,54 @@ Rosetta为custom elements实现了和标准一致的生命周期：
     </script>
 </element>
 ```
+
+### 组件嵌套
+Rosetta支持自定义组件的嵌套，使用方式和普通标签一样，组件嵌套有两种情况，一类是定义嵌套，第二类是使用时嵌套
+- 组件r-a定义时在r-a.html中使用了组件r-b，注意需要先声明依赖关系```<link rel="import" type="text/html" href="r-b.html">```再使用，否则r-b没加载加载，无法使用
+
+```
+    <element name="r-a" onAttached={attachcb}>
+        <style>
+        </style>
+        <template>
+            <link rel="import" type="text/html" href="r-b.html">
+            <r-b>
+                我是被嵌套的组件
+            </r-b>
+            <div>
+                {text}
+            </div>
+        </template>
+        <script type="text/javascript">
+            Rosetta({
+                is: 'r-a',
+                properties: {
+                    text: '测试'
+                }
+                attachcb: function() {
+                    this.text = 'after render';
+                }
+            });
+        </script>
+    </element>
+```
+
+- 写页面结构的时候r-b是r-a的子节点
+
+```
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>测试嵌套</div>
+        <r-b>
+            <r-a>
+                我是被嵌套的组件
+            </r-a>
+        </r-b>
+    </body>
+    </html>
+```
+

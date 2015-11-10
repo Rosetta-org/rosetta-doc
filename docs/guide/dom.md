@@ -2,10 +2,36 @@
 模板语法以```{}```包裹jsx形式作为模板语法，以下是关于模板的几个方面
 
 ### 数据和DOM结构
+- 简单的'title'变量
 ```
-<template>
-    {title}
-</template>
+    <template>
+        {title}
+    </template>
+```
+- 复杂的模板拼接，用闭包包裹内部结构
+
+```
+    <template>
+        {
+            (function() {
+                return (
+                    <div>
+                        <span>{title}</span>
+                    </div>
+                )
+            })
+        }
+    </template>
+```
+
+```
+    <template>
+        {
+            [1,2,3].map(function(item, index) {
+                return (<div>{item}</div>)
+            })
+        }
+    </template>
 ```
 
 ### 查找DOM
@@ -19,7 +45,7 @@
     Rosetta({
         is: 'r-test',
         attached: function() {
-            this.$.aaa // 访问属性为ref="aaa"的dom元素
+            this.$.aaa // 访问属性为ref="aaa"的dom元素，或者 this.$['aaa']
         }
     })
 </script>
