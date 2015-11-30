@@ -193,7 +193,7 @@ Rosetta让开发者能够更便捷的以声明式来写组件
 Rosetta为custom elements实现了和标准一致的生命周期：
 - created：组件创建
 - attached：组件渲染到document里
-- dettached：组件从document移除
+- detached：组件从document移除
 - attributechanged：属性更新
 
 
