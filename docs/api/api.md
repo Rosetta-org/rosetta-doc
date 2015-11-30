@@ -7,7 +7,7 @@
 - ready
 - created
 - attached
-- dettached
+- detached
 - attributeChanged
 - extends
 - properties
