@@ -89,7 +89,7 @@ Rosetta让开发者能够更便捷的以声明式来写组件
     </style>
     <template>
         <div>
-            {attrs.text}
+            {text}
         </div>
     </template>
     <script type="text/javascript">
@@ -129,7 +129,7 @@ Rosetta让开发者能够更便捷的以声明式来写组件
     </style>
     <template>
         <div>
-            {attrs.text}
+            {text}
         </div>
         <content select='.aaa'>
         </content>

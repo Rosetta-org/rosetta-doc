@@ -53,9 +53,8 @@ HTML为开发者提供了一系列的原生元素比如``` <p>、<form>、<table
 - VS Polymer：Polymer在运行时进行element解析对于性能有一定影响，而且对于浏览器尤其是手机的支持度不够产品级，比如在UC上无法正常使用
 - Rosetta提供一系列custom elements方便开发者使用，提供动态接口支持运行时的Native的组件替换
 - 一张图看清Rosetta
+<img src="/static/assets/images/phones_63cbdb3.png" style="opacity: 1; top: -10px;">
 
-
-### 获取核心Rosetta elements
 
 
 ### 开始使用Rosetta！

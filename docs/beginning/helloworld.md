@@ -43,11 +43,14 @@ r-helloworld.html内容如下
 
     </style>
     <template>
-        {attrs.hellotext}
+        {hellotext}
     </template>
     <script type="text/javascript">
         Rosetta({
-            is: 'r-helloworld'
+            is: 'r-helloworld',
+            properties: {
+                hellotext: String
+            }
         });
     </script>
 </element>
@@ -74,7 +77,7 @@ r-helloworld.html内容如下
 
             document.addEventListener('click', function() {
                 helloworld1.update({
-                    hellotext: helloworld1.attrs.hellotext + ' clicked'
+                    hellotext: helloworld1.hellotext + ' clicked'
                 });
             }, false);
         });

@@ -14,7 +14,7 @@ Rosetta不为组件提供css的shadow功能
     </style>
     <template>
         <div>
-            {attrs.text}
+            {text}
         </div>
     </template>
     <script type="text/javascript">

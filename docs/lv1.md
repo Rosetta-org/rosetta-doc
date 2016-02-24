@@ -48,7 +48,7 @@
 ```
 
 - html中使用数据
-    - 如果element有初始化属性为text，可通过```{attrs.text}```引用，同时可以通过实例的update()函数实现数据更新和UI渲染。attrs为内置变量，在js部分会详细说明
+    - 如果element有初始化属性为text，可通过```{text}```引用，同时可以通过实例的update()函数实现数据更新和UI渲染。attrs为内置变量，在js部分会详细说明
 
     - 如果element的register函数中定义了变量title，可以通过```{title}```直接访问。具体变量的定义和register函数在js部分会详细说明
 
@@ -61,7 +61,7 @@
         <div>
             我是DOM结构示例
         </div>
-        <span>{attrs.text}</span>
+        <span>{text}</span>
     </template>
 </element>
 
@@ -267,7 +267,7 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
 ### 更新element的属性
 - 在custom element使用的时候用attributes设置属性初始值
 - 通过element实例的update函数接口更新属性值，Rosetta自动完成UI更新
-- 内部html中通过```{attrs.xxx}```来引用对于```xxx```属性的
+- 内部html中通过```{xxx}```来引用对于```xxx```属性的
 
 
 定义element，绑定事件、实现属性更新逻辑
@@ -286,14 +286,17 @@ Rosetta在使用custom element时，使用HTML Import声明依赖，如下示例
             {title}
         </span>
         <div onClick={clicked}>
-            {attrs.text}
+            {text}
         </div>
     </template>
     <script type="text/javascript">
         Rosetta({
             is: 'r-slider',
             properties: {
-                text: 'init'
+                text: {
+                    type: String,
+                    value: 'init'
+                }
             },
             clicked: function() {
                 this.update({
